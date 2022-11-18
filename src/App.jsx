@@ -59,10 +59,10 @@ function App() {
     setTasks(newArr);
   };
 
-  // const deleteTask = (title) => {
-  //   const filteredTasks = displayTasks.filter((el) => el.title !== title);
-  //   setTasks(filteredTasks);
-  // };
+  const deleteTask = (title) => {
+    const filteredTasks = displayTasks.filter((el) => el.title !== title);
+    setTasks(filteredTasks);
+  };
 
   // const clearCompleted = () => {
   //   const filteredTasks = tasks.filter((el) => el.completed === false);

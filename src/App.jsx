@@ -49,15 +49,15 @@ function App() {
     setTasks(newTasks);
   };
 
-  // const changeStatusTask = (title) => {
-  //   const newArr = tasks.map((obj) => {
-  //     if (obj.title === title) {
-  //       return { ...obj, completed: !obj.completed };
-  //     }
-  //     return obj;
-  //   });
-  //   setTasks(newArr);
-  // };
+  const changeStatusTask = (title) => {
+    const newArr = tasks.map((obj) => {
+      if (obj.title === title) {
+        return { ...obj, completed: !obj.completed };
+      }
+      return obj;
+    });
+    setTasks(newArr);
+  };
 
   // const deleteTask = (title) => {
   //   const filteredTasks = displayTasks.filter((el) => el.title !== title);

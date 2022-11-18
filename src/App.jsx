@@ -44,10 +44,10 @@ function App() {
     filterDisplayTask(filterType);
   };
 
-  // const addTask = (title) => {
-  //   const newTasks = [...tasks, { title, completed: false }];
-  //   setTasks(newTasks);
-  // };
+  const addTask = (title) => {
+    const newTasks = [...tasks, { title, completed: false }];
+    setTasks(newTasks);
+  };
 
   // const changeStatusTask = (title) => {
   //   const newArr = tasks.map((obj) => {

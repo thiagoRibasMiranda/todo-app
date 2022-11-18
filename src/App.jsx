@@ -64,10 +64,10 @@ function App() {
     setTasks(filteredTasks);
   };
 
-  // const clearCompleted = () => {
-  //   const filteredTasks = tasks.filter((el) => el.completed === false);
-  //   setTasks(filteredTasks);
-  // };
+  const clearCompleted = () => {
+    const filteredTasks = tasks.filter((el) => el.completed === false);
+    setTasks(filteredTasks);
+  };
 
   return (
     <div className="text-3xl font-bold underline">

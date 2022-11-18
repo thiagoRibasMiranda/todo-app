@@ -39,10 +39,10 @@ function App() {
     filterDisplayTask(filter);
   }, [tasks]);
 
-  // const changeFilter = (filterType) => {
-  //   setFilter(filterType);
-  //   filterDisplayTask(filterType);
-  // };
+  const changeFilter = (filterType) => {
+    setFilter(filterType);
+    filterDisplayTask(filterType);
+  };
 
   // const addTask = (title) => {
   //   const newTasks = [...tasks, { title, completed: false }];

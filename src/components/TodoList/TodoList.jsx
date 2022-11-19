@@ -1,29 +1,29 @@
-function TodoList() {
-  const todoList = ["task1", "task2", "task3", "task4", "task5"];
-
-  const clearCompleted = () => {
-    todoList.pop();
-  };
-
-  const deleteTask = () => {
-    todoList.pop();
-  };
-
+/* eslint-disable react/prop-types */
+function TodoList({
+  displayTasks,
+  changeStatusTask,
+  deleteTask,
+  clearCompleted,
+}) {
   return (
     <div>
       <ul>
-        {todoList.map((element) => (
-          <div>
-            <input type="checkbox" />
-            <li key={element}>{element}</li>
-            <button type="button" onClick={deleteTask}>
+        {displayTasks.map((element) => (
+          <div key={element.title}>
+            <input
+              type="checkbox"
+              checked={element.completed}
+              onChange={() => changeStatusTask(element.title)}
+            />
+            <li>{element.title}</li>
+            <button type="button" onClick={() => deleteTask(element.title)}>
               Delete
             </button>
           </div>
         ))}
       </ul>
       <section>
-        <span>{todoList.length} items left</span>
+        <span>{displayTasks.length} items left</span>
         <button type="button" onClick={clearCompleted}>
           Clear Completed
         </button>

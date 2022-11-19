@@ -1,10 +1,16 @@
-function InputTask() {
+/* eslint-disable react/prop-types */
+import { useState } from "react";
+
+function InputTask({ addTask }) {
+  const [value, setValue] = useState("");
+
   const handleChange = (event) => {
-    console.log(event.target.value);
+    setValue(event.target.value);
   };
 
-  const addTask = () => {
-    console.log("clicou");
+  const handleSubmit = () => {
+    addTask(value);
+    setValue("");
   };
 
   return (
@@ -12,9 +18,10 @@ function InputTask() {
       <input
         type="text"
         placeholder="Create a new todo..."
+        value={value}
         onChange={handleChange}
       />
-      <button type="button" onClick={addTask}>
+      <button type="button" onClick={handleSubmit}>
         Adicionar
       </button>
     </div>

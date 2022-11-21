@@ -6,10 +6,13 @@ function TodoList({
   clearCompleted,
 }) {
   return (
-    <div>
+    <div className="m-0 m-auto p-0 m-4 m-auto bg-white rounded-md">
       <ul>
         {displayTasks.map((element) => (
-          <div key={element.title}>
+          <div
+            className="flex flex-row justify-between p-3 border-b-2"
+            key={element.title}
+          >
             <input
               type="checkbox"
               checked={element.completed}

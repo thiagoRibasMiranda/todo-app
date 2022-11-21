@@ -14,7 +14,7 @@ function InputTask({ addTask }) {
   };
 
   return (
-    <div className="text-3xl font-bold underline">
+    <div className="m-0 m-auto p-3 m-4 m-auto bg-white rounded-md">
       <input
         type="text"
         placeholder="Create a new todo..."
@@ -22,7 +22,7 @@ function InputTask({ addTask }) {
         onChange={handleChange}
       />
       <button type="button" onClick={handleSubmit}>
-        Adicionar
+        Add
       </button>
     </div>
   );

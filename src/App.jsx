@@ -70,8 +70,8 @@ function App() {
   };
 
   return (
-    <div className="text-3xl font-bold underline">
-      <h1>Todo App</h1>
+    <div className="p-0 m-0 flex flex-col bg-white-f8 bg-no-repeat bg-[length:100%_30%] bg-mobile-light w-full h-screen">
+      <h1 className="m-0 m-auto p-1 m-4 m-auto text-white text-2xl">TODO</h1>
       <InputTask addTask={addTask} />
       <TodoList
         displayTasks={displayTasks}

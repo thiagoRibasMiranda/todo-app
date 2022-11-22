@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import { ReactComponent as XmarkLogo } from "./icons/xmark.svg";
+
 function TodoList({
   displayTasks,
   changeStatusTask,
@@ -20,7 +22,7 @@ function TodoList({
             />
             <li>{element.title}</li>
             <button type="button" onClick={() => deleteTask(element.title)}>
-              Delete
+              <XmarkLogo />
             </button>
           </div>
         ))}

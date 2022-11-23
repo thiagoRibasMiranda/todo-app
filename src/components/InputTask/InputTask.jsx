@@ -15,7 +15,7 @@ function InputTask({ addTask }) {
   };
 
   return (
-    <div className="m-0 m-auto p-3 m-4 m-auto bg-white rounded-md">
+    <div className="m-0 m-auto p-3 m-4 m-auto bg-white rounded-md shadow-lg">
       <div className="flex justify-between">
         <input
           type="text"

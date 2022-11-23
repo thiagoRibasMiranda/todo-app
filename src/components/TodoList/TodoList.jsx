@@ -8,7 +8,7 @@ function TodoList({
   clearCompleted,
 }) {
   return (
-    <div className="m-0 m-auto p-0 m-4 m-auto bg-white rounded-md">
+    <div className="m-0 m-auto p-0 m-4 m-auto bg-white rounded-md shadow-lg">
       <ul>
         {displayTasks.map((element) => (
           <div
@@ -17,17 +17,20 @@ function TodoList({
           >
             <input
               type="checkbox"
+              className="w-4 h-4 accent-[#8091F2]"
               checked={element.completed}
               onChange={() => changeStatusTask(element.title)}
             />
-            <li>{element.title}</li>
+            <p className={element.completed ? "line-through" : ""}>
+              {element.title}
+            </p>
             <button type="button" onClick={() => deleteTask(element.title)}>
               <XmarkLogo />
             </button>
           </div>
         ))}
       </ul>
-      <section>
+      <section className="flex flex-row justify-between p-3">
         <span>{displayTasks.length} items left</span>
         <button type="button" onClick={clearCompleted}>
           Clear Completed

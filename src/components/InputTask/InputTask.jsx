@@ -15,10 +15,11 @@ function InputTask({ addTask }) {
   };
 
   return (
-    <div className="m-0 m-auto p-3 m-4 m-auto bg-white rounded-md shadow-lg">
+    <div className="m-0 m-auto p-3 m-4 mb-0.5 bg-white rounded-md shadow-lg">
       <div className="flex justify-between">
         <input
           type="text"
+          className="w-full"
           placeholder="Create a new todo..."
           value={value}
           onChange={handleChange}

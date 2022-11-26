@@ -8,7 +8,7 @@ function TodoList({
   clearCompleted,
 }) {
   return (
-    <div className="m-0 m-auto p-0 m-4 m-auto bg-white rounded-md shadow-lg">
+    <div className="m-0 m-auto p-0 m-4 bg-white rounded-md shadow-lg">
       <ul>
         {displayTasks.map((element) => (
           <div
@@ -21,7 +21,9 @@ function TodoList({
               checked={element.completed}
               onChange={() => changeStatusTask(element.title)}
             />
-            <p className={element.completed ? "line-through" : ""}>
+            <p
+              className={element.completed ? "line-through text-[#9797A1]" : ""}
+            >
               {element.title}
             </p>
             <button type="button" onClick={() => deleteTask(element.title)}>
@@ -30,9 +32,13 @@ function TodoList({
           </div>
         ))}
       </ul>
-      <section className="flex flex-row justify-between p-3">
+      <section className="flex flex-row justify-between p-3 text-[#9797A1]">
         <span>{displayTasks.length} items left</span>
-        <button type="button" onClick={clearCompleted}>
+        <button
+          className="hover:text-black"
+          type="button"
+          onClick={clearCompleted}
+        >
           Clear Completed
         </button>
       </section>

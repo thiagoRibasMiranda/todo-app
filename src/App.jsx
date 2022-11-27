@@ -3,24 +3,9 @@ import InputTask from "./components/InputTask/InputTask";
 import MenuFilter from "./components/MenuFilter/MenuFilter";
 import TodoList from "./components/TodoList/TodoList";
 
-const tasksMock = [
-  {
-    title: "Grab some Pizza",
-    completed: true,
-  },
-  {
-    title: "Do your workout",
-    completed: true,
-  },
-  {
-    title: "Hangout with friends",
-    completed: false,
-  },
-];
-
 function App() {
-  const [tasks, setTasks] = useState(tasksMock);
-  const [displayTasks, setDisplayTasks] = useState(tasks);
+  const [tasks, setTasks] = useState([]);
+  const [displayTasks, setDisplayTasks] = useState([]);
   const [filter, setFilter] = useState("All");
 
   const filterDisplayTask = (filterType) => {
@@ -76,6 +61,7 @@ function App() {
       </h1>
       <InputTask addTask={addTask} />
       <TodoList
+        tasks={tasks}
         displayTasks={displayTasks}
         changeStatusTask={changeStatusTask}
         deleteTask={deleteTask}

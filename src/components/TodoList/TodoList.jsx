@@ -2,6 +2,7 @@
 import { ReactComponent as XmarkLogo } from "./icons/xmark.svg";
 
 function TodoList({
+  tasks,
   displayTasks,
   changeStatusTask,
   deleteTask,
@@ -33,7 +34,10 @@ function TodoList({
         ))}
       </ul>
       <section className="flex flex-row justify-between p-3 text-[#9797A1]">
-        <span>{displayTasks.length} items left</span>
+        <span>
+          {tasks.filter((element) => element.completed === false).length} items
+          left
+        </span>
         <button
           className="hover:text-black"
           type="button"
